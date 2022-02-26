@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: inherit;
+        }
+        .nav {
+            display: flex;
+            background-color: rgb(40,116,240);
+            color: white; 
+            height: 30px;
+            padding: 10px 0 0 10px;
+            border-radius: 5px; 
+        }
+        .right {
+            display: flex;
+            justify-content:space-around;
+            width: 30%;
+
+        }
+        .Middle {
+            width:40%;
+           
+        }
+        .left {
+            width: 40%;
+            
+        }
+        select {
+            background-color: rgb(28, 41, 56);
+            color: white;
+            border: 0px ;
+             
+        }
+        a{
+            text-decoration: none;
+        }
+        #search{
+            width: 60%;
+            height: 20px;
+            
+        }
+      
+        #login{
+            margin-left: 200px;
+        }
+        #name{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #Name{
+            margin-left: 200px;
+        }
+        #Mob {
+            margin-left: 200px;
+        }
+        #mobile{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px; 
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #confirm{
+            margin-left: 200px;
+        }
+        #confirmation{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px; 
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #Email{
+            margin-left: 200px;
+            
+        }
+        #email{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #password{
+            margin-left: 200px;
+        }
+        #pass{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #rememberMe{
+          margin-left: 200px;
+        }
+        #signin{
+            margin-left: 200px;
+            height: 40px;
+            width: 70px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(92,184,92);
+            color: white;
+        }
+        #sign{
+            margin-left: 200px;
+        }
+        #forgot{
+            margin-left: 200px;
+        }
+        #know{
+            margin-left: 220px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+        ul{
+            margin-left: 225px;
+        } 
+        #IdeaHome{
+            color:rgb(255,255,0);
+          
+        }
+        #p1{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+        #p2{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+        #p3{
+            font-size: 20px;
+            margin-left: 150px;           
+        }
+        #p4{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+        #View{
+           
+            width: 1000px;
+            height: 640px;
+            margin-left: 250px;
+            margin-top: 50px;
+            display: flex;
+        }
+      
+        #img1 {
+           
+            width: 30%;
+            height: 70%; 
+        }
+        #info1 {
+           
+            width: 70%;
+            height: 100%; 
+        }
+        #imgdiv{
+            width: 90%;
+            height: 80%;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #E1E1E1;
+            border-radius: 5px;
+            background: #FFF;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        #button1{
+            padding-top: 100px;
+            padding: 10px 16px;
+      
+           border-radius: 6px;
+           background-color: #f0ad4e;
+           border-color: #eea236;
+        
+         color: white;
+        }
+        #refresh {
+            color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    margin-left: 580px;
+    margin-top: -30px;
+        }
+        .well{
+            min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+#buy{
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+
+}
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table {
+   
+    text-indent: initial;
+    border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  margin-left: 80px;
+}
+#pay{
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+}
+#amazonPay{
+    background-color: yellowgreen;
+    width: 350px;
+    text-align: center;
+    margin-left: 250px;
+}
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+#info2{
+    width: 50%;
+    margin-left: 250px;
+}
+#info3{
+    width: 1000px;
+    margin-left: 250px;
+}
+.well1{
+    width: 1000px;
+    margin-left: 250px;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+.well3{
+    width: 1000px;
+    margin-left: 250px;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+#about{
+   margin-left: 200px;
+   margin-top: 100px;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left"><a id="IdeaHome" href="home.html">IDEACART</a></div>
+        <div class="Middle">
+            <input id="search" type="text" placeholder="Search">
+            <button type="submit">Search</button>
+        </div>
+        <div class="right">
+            <div><a href="about.html">About</a></div>
+            <div><a href="">Contact</a></div>
+            <div><a href="SignIn.html">Sign In</a></div>
+            <div><a href="Signup.html">Sign Up</a></div>
+        </div>
+    </div>
+      <div id="View">
+         <div id="img1">
+           <div id="imgdiv">
+               <img id="img" src="https://images-eu.ssl-images-amazon.com/images/I/51nDz6Zu4SL.jpg" alt="">
+           </div>
+           <div style="display: flex;">
+               <div >
+                <p>
+                    Buy it at <b>best price</b> from here</p>
+                    <p style="font-weight: bold; font-size: 20px;">Rs. 483</p>
+               </div>
+               <div style="margin-top: 50px;">
+                <a id="button1" href="https://www.amazon.in/Rocks-What-Know-About-Them/dp/1541968301?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&tag=httptopicerco-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1541968301" >Buy Now</a>
+               </div>
+          
+           </div>
+          
+         </div>
+         <div id="info1">
+             <p style="margin-left: 30px;"> Refresh</p>
+             <button id="refresh" type="submit">Refresh Price</button>
+             <h1 style="margin-left: 30px;">Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books</h1>
+             <div class="well">
+                 <h2 style="margin-left: 10px;">Baby Professor's Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books</h2>
+                 <p  style="margin-left: 10px;">In this revised edition of a Baby Professor classic, we'll take a second look at rocks and what we know about them. Complete with age-appropriate texts and appealing images, kids will fall in love at first sight with this supplemental learning tool. Grab a copy in print, hardcover or digital format. Have fun learning!</p>
+             </div>
+             <h2 style="margin-left: 30px;">Store</h2>
+             <div>
+                 <table class="table">
+                     <thead>
+                        <tr>
+                            <th>Store</th>
+                            <th>Price</th>
+                            <th>Buy Now</th>
+                          </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Amazon, Paperback</td>
+                             <td>Rs. 569.0</td>
+                             <td><a id="buy" href="https://www.amazon.in/Rocks-What-Know-About-Them/dp/1541968301?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&tag=httptopicerco-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1541968301" style="color:white;height:48px;">Buy Now</a></td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+         </div>
+      </div>
+      <div id="amazonPay">
+        <a  id="pay" style="color:white;" href="https://www.amazon.in/Rocks-What-Know-About-Them/dp/1541968301?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&amp;tag=httptopicerco-21&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1541968301">Get Instant Cashback when you pay using Amazon </br>Pay... Click Here</a>
+      </div>
+      <div id="info2">
+        <h2 style="margin-left: 80px;">Book Specification</h2>
+        <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr >
+                  <td><strong>Binding</strong></td>
+                  <td>Paperback
+                  </td>
+              </tr>
+  
+              <tr >
+                  <td><strong>Language</strong></td>
+                  <td>English
+                  </td>
+              </tr>
+  
+              <tr >
+                  <td><strong>Number Of Pags</strong></td>
+                  <td>56
+                  </td>
+              </tr>
+  
+              <tr >
+                  <td><strong>Author</strong></td>
+                  <td><a href="">Baby Professor</a>
+                  </td>
+              </tr>
+  
+              <tr >
+                  <td><strong>Publisher</strong></td>
+                  <td><a href="">Baby Professor</a>
+                  </td>
+              </tr>
+              
+              
+              <tr >
+                  <td><strong>Isbn-10</strong></td>
+                  <td>1541968301
+                  </td>
+              </tr>
+  
+              <tr >
+                  <td><strong>Isbn-13</strong></td>
+                  <td>9781541968301
+                  </td>
+              </tr>
+              <tr>
+                  <td><strong>Dimension</strong></td>
+                  <td>15.19*0.3*22.91
+                  </td>
+              </tr>         
+   
+            </tbody>
+        </table>
+  
+      </div>
+    
+      <div id="info3">
+          <h2 style="font-size: 30px;">Why you should read Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books by Baby Professor</h2>
+      </div>
+      <div class="well1">
+          <p><b>This book</b> has been written by <b>Baby Professor</b>, who has written books like Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books,Everything There Is to Know about the Vietnam War - History Facts Books Children's War & Military Books,The Minoans and the Mycenaeans - Greece Ancient History 5th Grade - Children's Ancient History,From Mild to Wild, Dinosaurs for Kids - Dinosaur Book for 6-Year-Old - Children's Dinosaur Books,Letter Sounds for Preschoolers - Made Simple (Kindergarten Early Learning). The books are written in Science, Nature & Technology,Family, Personal & Social Issues,History,Early Learning category. <b>This book</b> is read by people who are interested in reading books in category :<b>Science, Nature & Technology</b> . So, if you want to explore books similar to  This book, you must <b>read</b> and<b>buy</b>  this book.</p>
+          <h3>Other books by same author</h3>
+          <table class="table">
+            <tbody><tr><th>
+            </th></tr><tr>
+            <td>Book
+            </td>
+            <td>Binding</td>
+            <td>Language</td>
+            </tr>
+            
+            <tr>
+            <td><a href="/book/rocks-and-what-we-know-about-them-geology-for-kids-revised-edition-children-s-earth-sciences-books-isbn10-1541968301-isbn13-9781541968301">Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/everything-there-is-to-know-about-the-vietnam-war-history-facts-books-children-s-war-military-books-isbn10-1541912462-isbn13-9781541912465">Everything There Is to Know about the Vietnam War - History Facts Books Children's War &amp; Military Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/the-minoans-and-the-mycenaeans-greece-ancient-history-5th-grade-children-s-ancient-history-isbn10-1541916174-isbn13-9781541916173">The Minoans and the Mycenaeans - Greece Ancient History 5th Grade - Children's Ancient History</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/from-mild-to-wild-dinosaurs-for-kids-dinosaur-book-for-6-year-old-children-s-dinosaur-books-isbn10-1541916360-isbn13-9781541916364">From Mild to Wild, Dinosaurs for Kids - Dinosaur Book for 6-Year-Old - Children's Dinosaur Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/letter-sounds-for-preschoolers-made-simple-kindergarten-early-learning-isbn10-1683680324-isbn13-9781683680321">Letter Sounds for Preschoolers - Made Simple (Kindergarten Early Learning)</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/1-2-3-4-i-can-learn-to-count-some-more-counting-book-baby-toddler-counting-books-isbn10-1683267087-isbn13-9781683267089">1, 2, 3, 4! I Can Learn to Count Some More Counting Book - Baby &amp; Toddler Counting Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/easy-spanish-phrases-for-kids-children-s-learn-spanish-books-isbn10-1541902440-isbn13-9781541902442">Easy Spanish Phrases for Kids Children's Learn Spanish Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/pedro-s-big-mexican-adventure-children-s-learn-spanish-books-isbn10-154190270X-isbn13-9781541902701">Pedro's Big Mexican Adventure Children's Learn Spanish Books</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            <tr>
+            <td><a href="/book/let-s-learn-german-german-learning-for-kids-isbn10-1541901649-isbn13-9781541901643">Let's Learn German! - German Learning for Kids</a></td>
+            <td>Paperback</td>
+            <td>English</td>
+            </tr>
+            </tbody></table>
+      </div>
+      <div id="info3">
+        <h2 style="font-size: 30px;" >How long would it take for you to read Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books</h2>
+      </div>
+
+      <div id="well3">
+          <p style="font-size: 20px; margin-left: 250px;">Depending on your reading style, this is how much time you would take to complete reading this book.</p>
+        <table style="width: 80%;" class="table">
+            <tbody><tr>
+            <th>Reading Style</th>
+            <td>Time To Finish The Book</td>
+            </tr>
+            <tr>
+            <th>Slow</th>
+            <td>11 hours</td>
+            </tr>
+            <tr>
+            <th>Average</th>
+            <td>5 hours</td>
+            </tr>
+            <tr>
+            <th>Good</th>
+            <td>3 hours</td>
+            </tr>
+            <tr>
+            <th>Excellent
+            </th>
+            <td>1 hours
+             </td>
+            </tr>
+            </tbody></table>
+            <p style="margin-left: 250px;"><b>So if you are a Reader belonging in the Good category, and you read it daily for 1 hour, it will take you 3 days.</b><br>
+            Note: A slow reader usually reads 100 words per minute, an average reader 200 words per minute, an average reader 300 words per minute and an excellent leader reads </br> about 600-1000 words per minute, however the comprehension may vary.</p>
+      </div>
+    <div id="about">
+             <li><a href="">About</a></li>
+               <li><a href="">Contact</a></li>
+               <li><a href="">Search</a></li>
+               <li><a href="">Privacy Policy</a></li>
+               <li><a href="">Refund Policy</a></li>
+               <li><a href="">Earn Money Online</a></li>
+               <li><a href="">QuickBuyer</a></li>
+           </ul>
+    </div>
+    </div>  </br>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            display: flex;
+            background-color: rgb(40,116,240);
+            color: white; 
+            height: 36px;
+            padding: 15px 0 0 10px;
+            border-radius: 5px; 
+        }
+        .right {
+            display: flex;
+            justify-content:space-around;
+            width: 30%;
+
+        }
+        .Middle {
+            width:40%;
+           
+        }
+        .left {
+            width: 40%;
+            
+        }
+        select {
+            background-color: rgb(28, 41, 56);
+            color: white;
+            border: 0px ;
+             
+        }
+        #IdeaHome{
+          color:rgb(255,255,0);
+        }
+        a{
+            text-decoration: none;
+        }
+        #search{
+            width: 60%;
+        }
+        #know{
+            margin-left: 220px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+        ul{
+            margin-left: 225px;
+        } 
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,300px);
+             gap: 10px;
+
+        }
+    .priceDiv {
+        display: flex;
+        justify-content: space-around;
+    }
+    .mainDiv{
+        width: 280px;
+        border: 1px solid #E1E1E1;
+        border-radius: 5px;
+        background: #FFF;
+        margin-left: 120px;
+        padding: 10px 10px 10px 10px;
+
+    }
+    .img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;   
+    }
+    #topread {
+        margin-left: 120px;
+        font-size:25px;
+    }
+    .name{
+        margin-block-start: 1em;
+         margin-block-end: 1em;
+         margin-inline-start: 0px;
+         margin-inline-end: 0px;
+    }
+    .price{
+         margin: 0;
+         color: rgb(55, 13, 133);
+    }
+    #search{
+      border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 20.2px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: -60px;
+    margin-left: -100px;
+    }
+   #searchb{
+    height: 34px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-image: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    color: #333;
+    margin-left: -20px;
+    background-color: #fff;
+    border-color: #ccc;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+   }
+   #view{
+    background-color: transparent;
+    box-sizing: border-box;
+    line-height: 20px;
+    text-align: center;
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 13px;
+
+  }  
+   
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left"><a id="IdeaHome" href="home.html">IDEACART</a></div>
+        <div class="Middle">
+            <input id="search" onkeyup="search()" type="text" placeholder="Search" name="query" autocomplete="off">
+            <button id="searchb" type="submit">Search</button>
+        </div>
+        <div class="right">
+            <div><a style="color: white;" href="">About</a></div>
+            <div><a style="color: white;" href="">Contact</a></div>
+            <div><a style="color: white;" href="SignIn.html">Sign In</a></div>
+            <div><a style="color: white;" href="Signup.html">Sign Up</a></div>
+         
+        </div>
+    </div>
+    <h1 id="topread"> Top Reads </h1>
+
+    <div id="container">
+       
+    </div>
+    <p id="know">Get To Know Us</p>
+    <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Search</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Refund Policy</a></li>
+        <li><a href="">Earn Money Online</a></li>
+        <li><a href="">QuickBuyer</a></li>
+    </ul>
+</body>
+</html>
+<script>
+  var IdeaData = [
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41VsosiRGTL.jpg",
+    name: "Disney & Marvel Characters Double Zip Pvc & Polyester Pencil Bag Pouch (Belle Princess)",
+    price: "129.0",
+    
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51nDz6Zu4SL.jpg",
+    name: "Rocks and What We Know About Them - Geology for Kids Revised Edition Children's Earth Sciences Books ",
+    price: 569,
+
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41jgNZML5YL.jpg",
+    name: "God Will Make a Way: Discovering His Hope in Your Story",
+    price: 1457,
+
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41F0f%2By%2By-L.jpg",
+    name: "Essential Vivekananda",
+    price: 305,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41ADDMwJOyL.jpg",
+    name: "Solitude: In Pursuit of a Singular Life in a Crowded World ",
+    price: 419,
+    
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/5198K3IipZL.jpg",
+    name: "Key to Criminal Court Practice & Procedures ",
+    price: 355,
+    
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51a9ToR4OBL.jpg",
+    name: " TOY-STATION SCRABBLE JUNIOR ( 2 IN 1 ) - ECONOMY VERSION ",
+    price: 499,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51AlvMDrmzL.jpg",
+    name: "Jisen LCD Writing Tablet 12 Inch Electronic Drawing Board Rewritten LCD Graphic Tablet with Stylus-Gift for School Students Kids ",
+    price: 1199,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51suj-TEcBL.jpg",
+    name: " KOBWA Gyroscope Toy,Precision Gyroscope Metal Physical Educational Toy Spinning Top Balance Gift Nostalgic Toys Life Bored Game ",
+    price: 569.0,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51KtyIuKLgL.jpg",
+    name: "The Greatest Treasure Hunt in History: The Story of the Monuments Men (Scholastic Focus)",
+    price: 325,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41hXVPKntUL.jpg",
+    name: "Bihar STET Madhyamik Shikshak Patrata Pariksha Shishan Kala Ayum Anay Dakshta Paper 1 & 2 2019 ",
+    price: 138.0,
+  },
+  {
+    image_url:
+      "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+    name: "Revlon One-Step Hair Dryer and Volumizer - User Manual ",
+    price: 167,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51I8%2BV1DmcL.jpg",
+    name: "NIOS TEXT 319 BUSINESS STUDY 319 NIOS HINDI MEDIUM ALL-IS-WELL SAMPLE PAPER PLUS +",
+    price: 100,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51f4OPPl6PL.jpg",
+    name: "SQUICKLE Kids Toys Digital Mobile Phone with Touch Screen Feature, Amazing Sound and Light Toy (doremon)",
+    price: 199,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51tDaWv3QeL.jpg",
+    name: "You are Fucking Adorable: Motivational Swear Words Coloring Book For Stress Relief and Relaxation Featuring Mandalas, Flowers, Paisley Pattern in Easy, Fun Adult Coloring Boosks",
+    price: 659.0,
+    strikedoffprice: 12000,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51W66NfbxnL.jpg",
+    name: "Oxford Companion to the English Language (Oxford Quick Reference)",
+    price: 346,
+    strikedoffprice: 1299,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/414BIkQxcBL.jpg",
+    name: "Atlas of Poetic Botany (The MIT Press)",
+    price: 1492,
+    strikedoffprice: 1699,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41V8vF68fYL.jpg",
+    name: "Concise Text Book for Pediatric Nursing",
+    price: 716,
+    strikedoffprice: 1699,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/514AQPc9saL.jpg",
+    name: "5 Steps to a 5: AP World History 2019 Elite Student Edition",
+    price: 1709,
+    strikedoffprice: 3499,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/510zTVo5ARL.jpg",
+    name: "Queen of Air and Darkness (The Dark Artifices)",
+    price: 1332,
+    strikedoffprice: 4999,
+  },
+  {
+    image_url:
+      " https://images-eu.ssl-images-amazon.com/images/I/51Tn-Ba49JL.jpg",
+    name: "FastUnbox dart board set 15 (ROUND METAL WIRING), double sided with 4 metal darts" ,
+    price: 375,
+    strikedoffprice: 1499,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51buTUgKQ0L.jpg",
+    name: " Funvention Spin Art Machine, DIY, STEM Learning Kit, Educational Toy, Art, Colouring, Painting Build and Play Kit for Kids and Grown up ",
+    price: 1299,
+    strikedoffprice: 2299,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51oE-NEW1LL.jpg ",
+    name: "  2018 SAT Math Database Book Bd: Collection of 1,000 Question Types (Mad Math Test Preparation) ",
+    price: 2031,
+    strikedoffprice: 3599,
+  },
+  {
+    image_url:
+      " https://images-eu.ssl-images-amazon.com/images/I/51bh3bNss3L.jpg",
+    name: " Agriculture at a Glance 3rd Revised edn (Hindi) (PB) (9788194276036) (2020)",
+    price: 300,
+    strikedoffprice: 1299,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51XXGJlFrHL.jpg ",
+    name: " Xam Idea Complete Course Mathematics Class 9 for 2019 Exam ",
+    price: 300,
+    strikedoffprice: 4999,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/511a7lLVirL.jpg ",
+    name: "Ayodhya: City of Faith, City of Discord ",
+    price: 611,
+    strikedoffprice: 4999,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51TuNqtN0iL.jpg",
+    name: "Banana ",
+    price: 236.21,
+    strikedoffprice: 2799,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51n14GqxdNL.jpg ",
+    name: "To End a Presidency: The Power of Impeachment",
+    price: 1437.0,
+    strikedoffprice: 3499,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/41%2BH%2BynXnRL.jpg",
+    name: "TOEFL iBT Prep Plus 2020-2021: 4 Practice Tests + Proven Strategies + Online + Audio (Kaplan Test Prep)",
+    price: 21673.0,
+    strikedoffprice: 5599,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/51h0K8VgI1L.jpg",
+    name: "PLAYQID Hindi Alphabet Floor Puzzle for 6+ Year Kids (3 x 2 Ft.)",
+    price: 664.0,
+    strikedoffprice: 3599,
+  },
+  {
+    image_url:
+      "https://images-eu.ssl-images-amazon.com/images/I/61-A0ClGQHL.jpg",
+    name: "Ronaldo (Classic Football Heroes - Limited International Edition)",
+    price: 340.0,
+    strikedoffprice: 3599,
+  },
+ 
+];
+   localStorage.setItem("IdeaData", JSON.stringify(IdeaData));
+
+   var IdeaData = JSON.parse(localStorage.getItem("IdeaData"))
+    displayData(IdeaData);
+function displayData(items){
+  IdeaData.map(function(elem){
+       var mainDiv = document.createElement("div")
+       mainDiv.setAttribute("class", "mainDiv")
+       
+       var img = document.createElement("img");
+       img.setAttribute("src", elem.image_url);
+       img.setAttribute("class", "img")
+
+
+       var name = document.createElement("p");
+       name.innerText = elem.name;
+       name.setAttribute("class", "name")
+
+
+       var price = document.createElement("p");
+       price.innerText = elem.price;
+       price.setAttribute("class", "price")
+
+
+
+       var innerDiv = document.createElement("div");
+      
+
+       var View = document.createElement("a");
+       View.innerText = "View Now";
+       View.setAttribute("id", "View");
+       View.setAttribute("href", "viewNow.html")
+       
+
+       
+      
+
+       
+
+
+       
+       var More = document.createElement("a");
+       More.innerText = "More details";
+       More.setAttribute("id", "More");
+       More.setAttribute("href", "viewNow.html")
+
+       innerDiv.append(View, More);
+       innerDiv.setAttribute("class", "priceDiv")
+
+       mainDiv.append(img, name, price, innerDiv);
+       document.querySelector("#container").append(mainDiv);
+   });
+
+   
+}
+function search(){
+     var searchText = document.getElementById("search").value;
+     console.log(searchText);
+     var filterData = IdeaData.filter(function(item){
+        return item.name.includes(searchText);
+     }) 
+     console.log(filterData);
+     displayData(filterData);
+   }
+
+ 
+</script>

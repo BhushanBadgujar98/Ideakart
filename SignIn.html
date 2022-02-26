@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: inherit;
+        }
+        .nav {
+            display: flex;
+            background-color: rgb(40,116,240);
+            color: white; 
+            height: 30px;
+            padding: 10px 0 0 10px;
+            border-radius: 5px; 
+        }
+        .right {
+            display: flex;
+            justify-content:space-around;
+            width: 30%;
+
+        }
+        .Middle {
+            width:40%;
+           
+        }
+        .left {
+            width: 40%;
+            
+        }
+        select {
+            background-color: rgb(28, 41, 56);
+            color: white;
+            border: 0px ;
+             
+        }
+        a{
+            text-decoration: none;
+        }
+        #search{
+            width: 60%;
+            height: 20px;
+            
+        }
+      
+        #login{
+            margin-left: 200px;
+        }
+        #Email{
+            margin-left: 200px;
+            
+        }
+        #email{
+            margin-left: 200px;
+            width: 70%;
+            height: 30px;
+        }
+        #password{
+            margin-left: 200px;
+        }
+        #pass{
+            margin-left: 200px;
+            width: 70%;
+            height: 30px;
+        }
+        #rememberMe{
+          margin-left: 200px;
+        }
+        #signin{
+            margin-left: 200px;
+            height: 40px;
+            width: 70px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(92,184,92);
+            color: white;
+        }
+        #sign{
+            margin-left: 200px;
+        }
+        #forgot{
+            margin-left: 200px;
+        }
+        #know{
+            margin-left: 220px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+        ul{
+            margin-left: 225px;
+        }
+        #IdeaHome{
+            color:rgb(255,255,0);
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left"><a id="IdeaHome" href="home.html">IDEACART</a></div>
+        <div class="Middle">
+            <input id="search" type="text" placeholder="Search">
+            <button type="submit">Search</button>
+        </div>
+        <div class="right">
+            <div><a style="color: white;" href="about.html">About</a></div>
+            <div><a style="color: white;" href="">Contact</a></div>
+            <div><a style="color: white;" href="SignIn.html">Sign In</a></div>
+            <div><a style="color: white;" href="Signup.html">Sign Up</a></div>
+        </div>
+    </div>
+    <div>
+        <form id="form">
+            <h1 id="login">Log in</h1>
+            <p id="Email">Email</p>
+            <input type="email" id="email" >
+            <p id="password">Password</p>
+            <input type="password" name="" id="pass"> 
+            <h1></h1>
+            <input type="checkbox" value="lsRememberMe" id="rememberMe">
+             <label for="rememberMe">Remember me</label>
+             <h1></h1>
+             <button id="signin" type="submit">Log in</button>
+             <h1></h1>
+             <a id="sign" href="Signup.html">Sign up</a>
+             <h1></h1>
+             <a id="forgot" href="">Forgot your password?</a>
+        </form>
+           <p id="know">Get To Know Us</p>
+           <ul>
+               <li><a href="">About</a></li>
+               <li><a href="">Contact</a></li>
+               <li><a href="">Search</a></li>
+               <li><a href="">Privacy Policy</a></li>
+               <li><a href="">Refund Policy</a></li>
+               <li><a href="">Earn Money Online</a></li>
+               <li><a href="">QuickBuyer</a></li>
+           </ul>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+  var regdusers = JSON.parse(localStorage.getItem("signupDetails"));
+  console.log(regdusers);
+
+  document.querySelector("#form").addEventListener("submit", formSubmit);
+
+  var form = document.querySelector("#form");
+
+
+  function formSubmit(event) {
+      event.preventDefault();
+
+      var email =document.querySelector("#email").value
+      var pass = document.querySelector("#pass").value
+      console.log(email, pass);
+      var bag = "";
+     
+       for( var i=0; i<regdusers.length; i++)
+        {
+            if(regdusers[i].email == email && regdusers[i].pass == pass)
+            {
+              bag = "yes";
+            }
+            
+        }
+        if(bag=="yes")
+        {
+            alert("Login Successful");
+            window.location.href="AppHome.html";
+
+        }
+        else{
+            alert("incorrect details")
+        }
+   }
+function need(){
+    window.location.href="Signup.html";
+}
+           
+    
+      
+  
+ 
+</script>

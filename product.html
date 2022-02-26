@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: inherit;
+        }
+        .nav {
+            display: flex;
+            background-color: rgb(40,116,240);
+            color: white; 
+            height: 30px;
+            padding: 10px 0 0 10px;
+            border-radius: 5px; 
+        }
+        .right {
+            display: flex;
+            justify-content:space-around;
+            width: 30%;
+
+        }
+        .Middle {
+            width:40%;
+           
+        }
+        .left {
+            width: 40%;
+            
+        }
+        select {
+            background-color: rgb(28, 41, 56);
+            color: white;
+            border: 0px ;
+             
+        }
+        a{
+            text-decoration: none;
+        }
+        #search{
+            width: 60%;
+            height: 20px;
+            
+        }
+      
+        #login{
+            margin-left: 200px;
+        }
+        #name{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #Name{
+            margin-left: 200px;
+        }
+        #Mob {
+            margin-left: 200px;
+        }
+        #mobile{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px; 
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #confirm{
+            margin-left: 200px;
+        }
+        #confirmation{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px; 
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #Email{
+            margin-left: 200px;
+            
+        }
+        #email{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #password{
+            margin-left: 200px;
+        }
+        #pass{
+            margin-left: 200px;
+            width: 70%;
+            height: 25px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #rememberMe{
+          margin-left: 200px;
+        }
+        #signin{
+            margin-left: 200px;
+            height: 40px;
+            width: 70px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(92,184,92);
+            color: white;
+        }
+        #sign{
+            margin-left: 200px;
+        }
+        #forgot{
+            margin-left: 200px;
+        }
+        #know{
+            margin-left: 220px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+        ul{
+            margin-left: 225px;
+        } 
+        #IdeaHome{
+            color:rgb(255,255,0);
+          
+        }
+        #hometask{
+            width: 120px;
+            height: 350px;
+           
+        }
+        .head1{
+            margin-left: 200px;
+        }
+        #hometask > div {
+            margin-top: 20px;
+            text-align: center;
+            border-color: #ddd transparent #ddd #ddd;
+            border-radius: 4px;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+        #Dashboard{
+            width: 80%;
+            height: 350px;
+           
+            margin-left: 200px;
+            display: flex;
+        }
+        #upload{
+            padding: 10px 16px;
+           font-size: 18px;
+           line-height: 1.3333333;
+           border-radius: 6px;
+           color: #fff;
+            background-color: #337ab7;
+           border-color: #2e6da4;
+           margin-left: 100px;
+        }
+        #taskbar{
+            width: 1000px;
+            height: 200px;
+           
+            margin-top: 40px;
+            margin-left: 50px;
+            display: flex;
+        }
+        #task1{
+         
+            width: 200px;
+            height: 120px;
+            margin-left: 50px;
+            background-color: rgb(0,128,0);
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
+        #task2{
+           
+            width: 200px;
+            height: 120px;
+            margin-left: 50px;
+            background-color: rgb(255,165,0);
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #task3{
+           
+            width: 200px;
+            height: 120px;
+            margin-left: 50px;
+            background-color: rgb(230,135,135);
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
+        #welcome{
+            margin-left: 80px;
+        }
+        #select{
+            border: none;
+            background-color: rgb(40,116,240);
+            
+        }
+        form {
+          width: 400px;
+          border: 1px solid rgb(230, 230, 230);
+          margin: 3% auto;
+          padding: 3%;
+          background: white;
+        }
+       
+        th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+tr > th {
+  background-color: white;
+  color:black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="left"><a id="IdeaHome" href="home.html">IDEACART</a></div>
+        <div class="Middle">
+            <input id="search" type="text" placeholder="Search">
+            <button type="submit">Search</button>
+        </div>
+        <div class="right">
+            <div><a style="color: white;" href="">About</a></div>
+            <div><a style="color: white;" href="">Contact</a></div>
+            <div>
+                <select id="select">
+                    <option style="color: white;" value="">Bhushan</option>
+                    <option style="color: white;" value=""><a href="AppHome.html">Dashboard</a> </option>
+                    <option style="color: white;" value="">Log Out</option>
+                    <option style="color: white;" value="">Notification</option>
+                </select>
+            </div>
+        </div>
+    </div>
+     <h2 class="head1">Your Dashboard</h2>
+     <div id="Dashboard">
+        <div id="hometask">
+            <div>
+                <a href="AppHome.html">Home</a>
+            </div>
+            <div>
+                <a href="Newproduct.html">New Product</a>
+            </div>
+            <div>
+                <a href="product.html">Products</a>
+            </div>
+            <div>
+                <a href="Credits.html">Credits</a>
+            </div>
+        </div>
+       
+        <div>
+           <h1 style="margin-left: 80px;">Products</h1>
+           <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Media</th>
+                <th>How to use</th>
+                <th>Approval Status</th>
+              </tr>
+            </thead>
+            <tbody id="body"></tbody>
+          </table>
+        </div>
+        
+
+     </div>
+    
+
+    <div>
+     
+           <p id="know">Get To Know Us</p>
+           <ul>
+               <li><a href="">About</a></li>
+               <li><a href="">Contact</a></li>
+               <li><a href="">Search</a></li>
+               <li><a href="">Privacy Policy</a></li>
+               <li><a href="">Refund Policy</a></li>
+               <li><a href="">Earn Money Online</a></li>
+               <li><a href="">QuickBuyer</a></li>
+           </ul>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    var NewproductArr = JSON.parse(localStorage.getItem("Newproduct"))
+
+    console.log(NewproductArr);
+
+   NewproductArr.map(function (elem, index) {
+    var row = document.createElement("tr");
+
+var col1 = document.createElement("td");
+col1.innerText = elem.ProductName;
+
+var col2 = document.createElement("td");
+col2.innerText = elem.ProductExperience;
+
+var col3 = document.createElement("td");
+col3.innerText = elem.ProductFile;
+
+var col4 = document.createElement("td");
+col4.innerText = "Under Review";
+
+row.append(col1, col3, col2, col4);
+
+document.querySelector("#body").append(row);
+
+   });
+
+     
+ 
+
+</script>
